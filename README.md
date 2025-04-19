@@ -4,7 +4,7 @@
   <p>
     <a href="https://www.npmjs.com/package/@logue/sf2synth"><img src="https://img.shields.io/npm/v/@logue/sf2synth?color=orange&label=sf2synth" alt="npm"></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-    <a href="https://github.com/calpaliu/sf2-export/pulls"><img src="https://img.shields.io/github/issues-pr/calpaliu/sf2-export?color=green" alt="Pull Requests"></a>
+    <a href="https://github.com/calpa/sf2-export/pulls"><img src="https://img.shields.io/github/issues-pr/calpa/sf2-export?color=green" alt="Pull Requests"></a>
   </p>
 </div>
 
