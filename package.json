@@ -2,7 +2,9 @@
   "name": "sf2-export",
   "version": "1.0.0",
   "main": "index.js",
-  "bin": "dist/extract_sf2_samples.js",
+  "bin": {
+    "sf2-export": "dist/extract_sf2_samples.js"
+  },
   "type": "module",
   "scripts": {
     "build": "tsc",
