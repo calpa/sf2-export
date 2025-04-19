@@ -36,19 +36,59 @@ $ npm install
 ```
 
 ### Usage
-1. Place your `.sf2` file in the `src` directory (default: `MSXSpirit+.sf2`).
-2. Run the extractor:
-   ```bash
-   node extract_sf2_samples.ts
-   ```
-3. Extracted `.wav` files will appear in the `output` directory (created automatically if needed).
 
-#### 🔧 Customization
-- To use a different SF2 file, edit the path in `extract_sf2_samples.ts`:
-  ```js
-  const buf = await fs.readFile('./src/YourSoundFont.sf2');
-  ```
-- You may also change the output directory as needed.
+**Build first (TypeScript):**
+```bash
+yarn build
+```
+
+You can use this tool as a CLI with flexible options and a beautiful progress bar:
+
+```bash
+npx sf2-export --input ./src/my.sf2 --out ./samples --filter Mandolin
+```
+
+**Options:**
+- `--input`, `-i` : Specify the SF2 file path (default: `./src/MSXSpirit+.sf2`)
+- `--out`, `-o`   : Output directory for WAV files (default: `output`)
+- `--filter`, `-f`: Filter samples by name (substring match)
+
+**Features:**
+- 🚀 Fast extraction with a live progress bar (cli-progress)
+- 🏷️ Filter by sample name
+- 🗂️ Output directory auto-created if missing
+
+**Examples:**
+```bash
+# Build first (if using TypeScript source)
+yarn build
+
+# Basic usage with default paths
+npx sf2-export
+
+# Specify input SF2 and output directory
+npx sf2-export --input ./src/my.sf2 --out ./samples
+
+# Export only samples with 'Mandolin' in their name
+npx sf2-export --input ./src/my.sf2 --filter Mandolin
+```
+
+#### 📦 Publish as npm CLI
+
+To use as a global CLI after publishing:
+
+```bash
+npm publish
+npx sf2-export --input ./My.sf2
+```
+
+### 🛠️ Troubleshooting
+- **TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension ".ts"**
+  - Make sure to run `yarn build` first, and that you are running the compiled JS in `dist/`.
+- **Module not found**
+  - Run `yarn install` to install all dependencies.
+- **Permission denied (shebang)**
+  - If you get a permission error, try `chmod +x dist/extract_sf2_samples.js`.
 
 ## 📦 Dependencies
 - [`@logue/sf2synth`](https://www.npmjs.com/package/@logue/sf2synth) — SF2 parser
