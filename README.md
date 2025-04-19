@@ -28,11 +28,11 @@
 ### Installation
 ```bash
 # Clone the repository
-$ git clone https://github.com/calpaliu/sf2-export.git
+$ git clone https://github.com/calpa/sf2-export.git
 $ cd sf2-export
 
 # Install dependencies
-$ npm install
+$ yarn
 ```
 
 ### Usage
@@ -104,10 +104,10 @@ npx sf2-export --input ./My.sf2
   - Ensure your SF2 file is valid, or try another audio player.
 
 ## 🤝 Contributing
-Contributions are welcome! Please open an [issue](https://github.com/calpaliu/sf2-export/issues) to discuss major changes, or submit a pull request.
+Contributions are welcome! Please open an [issue](https://github.com/calpa/sf2-export/issues) to discuss major changes, or submit a pull request.
 
 ## 🧑‍💻 Author
-[Calpa Liu](https://github.com/calpaliu)
+[Calpa Liu](https://github.com/calpa)
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE).
